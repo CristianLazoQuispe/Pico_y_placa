@@ -6,9 +6,11 @@ Peru's govermment implemented
 ## GETTING STARTED
 
 #### Using ISO 
-- Download the image of jetson nano with all libraries and code implemented :
+- Download the repository:
+        git clone https://github.com/CristianLazoQuispe/Pico_y_placa.git
 
-        www.google.com
+        Save it in the documents folder
+
 
 - Open folder Pico_placa_SSD :
     
@@ -34,24 +36,25 @@ Peru's govermment implemented
 
 - Download this repository:
 
-        git clone 
+        git clone https://github.com/CristianLazoQuispe/Pico_y_placa.git
 - Follow the instructions of installation on pdf:
 
         Pico_y_placa.pdf
 
-
-#### Works
-
-This work was inspired using cutting edge algorithms 
-
-- Sort
-
-        www.google.com
 - SSD MobileNet
-
-        www.google.com
+        This project use the model od SSD MobileNet on TensorRT
+        We use the model of the repository tensorrt_demos:
+        
+        git clone https://github.com/jkjung-avt/tensorrt_demos.git
+        
+        Download and implement the TensorRT model from SSD Mobilenet and copy it to the ssd folder
 
 - OpenALPR
+        Download the repository and copy the runtime_data folder to Pico_y_placa:
 
-        www.google.com
+        git clone https://github.com/openalpr/openalpr.git
+        
 
+- Run code pico_placa.py
+
+        python3 pico_placa.py
