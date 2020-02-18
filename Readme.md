@@ -6,11 +6,10 @@ Peru's govermment implemented
 ## GETTING STARTED
 
 #### Using ISO 
-- Download the repository:
-        git clone https://github.com/CristianLazoQuispe/Pico_y_placa.git
+- Download ISO :
+        https://drive.google.com/drive/folders/1_XjzvR0key_jjU8aexq3Zpe6h2fgbZnz?usp=sharing
 
-        Save it in the documents folder
-
+- Flash SD CARD with Etcher:
 
 - Open folder Pico_placa_SSD :
     
