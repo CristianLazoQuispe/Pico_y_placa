@@ -1,7 +1,6 @@
 # Real Time Road Space Rationing control using Jetson Nano
 
-Peru's govermment implemented
-
+Perú’s government implemented an alternate-day travel restriction based on the license plate last-digit. Our solution look to automate this.
 
 ## GETTING STARTED
 
