@@ -6,7 +6,7 @@ Peru's govermment implemented
 ## GETTING STARTED
 
 #### Using ISO 
-- Download ISO :
+- Download ISO pico_placa.gz:
         https://drive.google.com/drive/folders/1_XjzvR0key_jjU8aexq3Zpe6h2fgbZnz?usp=sharing
 
 - Flash SD CARD with Etcher:
