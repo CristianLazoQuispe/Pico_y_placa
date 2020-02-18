@@ -1,7 +1,7 @@
 # Real Time Road Space Rationing control using Jetson Nano
 
 Perú’s government implemented an alternate-day travel restriction based on the license plate last-digit. Our solution look to automate this.
-<img src="images/LIMA.jpeg?raw=true" width="2500" height = "300"/>
+<img src="images/LIMA.jpg?raw=true" width="2500" height = "300"/>
 
 
 ## GETTING STARTED
