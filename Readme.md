@@ -58,3 +58,7 @@ Peru's govermment implemented
 - Run code pico_placa.py
 
         python3 pico_placa.py
+
+# You can see our results in the following link
+
+        https://www.youtube.com/watch?v=ugQnUsgQzWY
