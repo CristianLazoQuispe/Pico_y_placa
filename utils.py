@@ -392,74 +392,12 @@ def get_cls_dict(model):
         raise ValueError('Bad model name')
     return {i: n for i, n in enumerate(cls_list)}
 
-
-
-def time_in_range(start, end, x):
-    """Return true if x is in the range [start, end]"""
-    if start <= end:
-        return start <= x <= end
-    else:
-        return start <= x or x <= end
 def get_time_now():
     now = datetime.datetime.now()
     current_time = now.strftime("%H:%M:%S")
     current_time = datetime.time(int(current_time[:2]),int(current_time[3:5]),int(current_time[6:8]))
     return current_time
 
-
-def get_data(name):
-    dnis_json = []
-    encodings_json = []
-    names_json = []
-    data_json = []
-    try:
-        with open(name, 'r') as f:
-            data_json = json.load(f)
-        for keys_1 in data_json.keys():
-            dnis_jsonXF = list(data_json[keys_1].keys())
-            for dnis_name in dnis_jsonXF:
-                dnis_json.append(dnis_name)
-                id_name = data_json[keys_1][dnis_name]['Nombres']+' '+data_json[keys_1][dnis_name]['ApellidoPaterno'][0]+'.'
-                names_json.append(id_name)
-                id_encoding = data_json[keys_1][dnis_name]['Encodings'] 
-                encodings_json.append(id_encoding)
-        bandera =True
-    except:
-        print('json file cannot loaded')
-        bandera = False
-        
-    return data_json,dnis_json,encodings_json,names_json,bandera
-
-def has_access(data_json,dni_person):
-    bandera = False
-    
-    if dni_person in data_json['Colaboradores'].keys():
-        bandera = True
-        return bandera
-    if dni_person in data_json['Visitantes'].keys():
-        now_time = get_time_now()
-        for i in range(0,len(data_json['Visitantes'][dni_person]['Permisos'])):
-            hora_inicio = data_json['Visitantes'][dni_person]['Permisos'][i]['HoraInicio']
-            hora_fin = data_json['Visitantes'][dni_person]['Permisos'][i]['HoraFin']
-            hora_inicio  = datetime.datetime.strptime(hora_inicio, '%H:%M').time()
-            hora_fin  = datetime.datetime.strptime(hora_fin, '%H:%M').time()
-            bandera =time_in_range(hora_inicio,hora_fin, now_time)
-    return bandera
-
-import urllib.request, json 
-
-def download_data():
-    bandera = False
-    try:
-        with urllib.request.urlopen("https://srf-webapp-prd.azurewebsites.net/api/device/getdata/00:e0:4c:68:00:e6") as url:
-            data = json.loads(url.read().decode())
-            #print(data)    
-        with open('demoDataTotalSync.json', 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
-        bandera  = True
-    except:
-        bandera  = False
-    return bandera
 
 def correction_ilu_01(BGR):
     B,G,R = cv2.split(BGR)
