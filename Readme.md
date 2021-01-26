@@ -2,6 +2,9 @@
 
 ## Acknowledge : MDP consulting S.A.C -INNOVATION DEPARTMENT
 
+AI at the Edge Challenge
+https://www.hackster.io/cristian-lazo-quispe/real-time-road-space-rationing-control-using-jetson-nano-89c2da
+
 
 Perú’s government implemented an alternate-day travel restriction based on the license plate last-digit. Our solution look to automate this.
 
